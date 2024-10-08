@@ -56,9 +56,44 @@
 
         <div id="main">
           <div id="content" Old>
-            <p>
-  hello, world!
-</p>
+            <h1><a href="#documentation" aria-hidden="true" class="anchor" id="documentation"></a>Documentation</h1>
+<p>The Elixir programming language is broken into 6 applications. The links below
+reference the documentation for the modules and functions in each of those
+applications. See also <a href="https://hexdocs.pm/elixir/introduction.html">our Getting Started guide</a>
+and <a href="/learning.html">the Learning page</a> for books, courses, videos, and more.</p>
+<p>{% assign stable = site.data.elixir-versions[site.data.elixir-versions.stable] %}</p>
+<p>{% for version in site.data.elixir-versions %}
+{% if version[0] == 'stable' %}
+{% continue %}
+{% endif %}</p>
+<h4 id="{{ version[1].name }}">
+  {{ version[1].name }}
+  {% if version[1].version == stable.version %}<small>(stable)</small>{% endif %}
+  <small>(<a href="https://github.com/elixir-lang/elixir/releases/download/v{{ version[1].version }}/Docs.zip">download</a>)</small>
+</h4>
+<p>{% if version[1].otp_versions %}
+Supported Erlang/OTP versions: {% for otp in version[1].otp_versions reversed %}{{ otp }}{% if forloop.last %}{% else %}, {% endif %}{% endfor %}.
+{% endif %}</p>
+<ul>
+<li>[Elixir](https://hexdocs.pm/elixir/{{ version[1].version }}/) - standard library</li>
+<li>[EEx](https://hexdocs.pm/eex/{{ version[1].version }}/) - templating library</li>
+<li>[ExUnit](https://hexdocs.pm/ex_unit/{{ version[1].version }}/) - unit test library</li>
+<li>[IEx](https://hexdocs.pm/iex/{{ version[1].version }}/) - interactive shell</li>
+<li>[Logger](https://hexdocs.pm/logger/{{ version[1].version }}/) - built-in Logger</li>
+<li>[Mix](https://hexdocs.pm/mix/{{ version[1].version }}/) - build tool</li>
+</ul>
+<div style="margin-top: 40px"></div>
+{% endfor %}
+<h4><a href="#development" aria-hidden="true" class="anchor" id="development"></a>Development</h4>
+<ul>
+<li><a href="https://hexdocs.pm/elixir/main/">Elixir</a> - standard library</li>
+<li><a href="https://hexdocs.pm/eex/main/">EEx</a> - templating library</li>
+<li><a href="https://hexdocs.pm/ex_unit/main/">ExUnit</a> - unit test library</li>
+<li><a href="https://hexdocs.pm/iex/main/">IEx</a> - interactive shell</li>
+<li><a href="https://hexdocs.pm/logger/main/">Logger</a> - built-in Logger</li>
+<li><a href="https://hexdocs.pm/mix/main/">Mix</a> - build tool</li>
+</ul>
+
           </div>
           <!-- #content -->
           <div id="sidebar-primary" class="sidebar">

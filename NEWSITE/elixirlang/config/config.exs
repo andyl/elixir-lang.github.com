@@ -10,10 +10,6 @@ config :web_dev_utils, :reload_log, true
 # uncomment this if you use something like ngrok
 # config :web_dev_utils, :reload_url, "'wss://' + location.host + '/ws'"
 
-
-
-
-
 config :tableau, :config,
   url: "http://localhost:4999",
   markdown: [

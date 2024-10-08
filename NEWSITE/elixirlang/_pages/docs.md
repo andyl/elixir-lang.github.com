@@ -1,8 +1,7 @@
 ---
 title: Elixir Documentation
-section: docs
-layout: default
-image: /images/social/elixir-og-card.jpg
+layout: Elixirlang.PageLayout
+permalink: /page/docs
 ---
 
 # Documentation

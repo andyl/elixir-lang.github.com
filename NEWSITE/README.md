@@ -27,8 +27,11 @@ Learnings - 2024 Oct 07 Mon
 - it looks like there are already Tableau equivalents for Jekyll plugins (site map, RSS)
 - so far no show-stoppers have been uncovered
 
-Next Steps 
-- [ ] render main pages 
+Tasks - 2024 Oct 08 Tue
+- [ ] update auto-reload patterns 
+- [ ] add homepage (/) 
+- [ ] update liquid tags 
+- [ ] add rest of main pages
 - [ ] render blog page 
 - [ ] render posts
 - [ ] convert all liquid directives to HEEX and/or function components
