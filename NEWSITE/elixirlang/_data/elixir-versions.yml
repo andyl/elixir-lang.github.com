@@ -1,0 +1,73 @@
+stable: v1_17
+
+v1_17:
+  name: v1.17
+  minimum_otp: 25.0
+  otp_versions: [27, 26, 25]
+  version: 1.17.3
+
+v1_16:
+  name: v1.16
+  minimum_otp: 24.0
+  otp_versions: [26, 25, 24]
+  version: 1.16.3
+
+v1_15:
+  name: v1.15
+  minimum_otp: 24.0
+  otp_versions: [26, 25, 24]
+  version: 1.15.8
+
+v1_14:
+  name: v1.14
+  minimum_otp: 23.0
+  otp_versions: [25, 24, 23]
+  version: 1.14.5
+
+v1_13:
+  name: v1.13
+  minimum_otp: 22.0
+  otp_versions: [24, 23, 22]
+  version: 1.13.4
+
+v1_12:
+  name: v1.12
+  minimum_otp: 22.0
+  otp_versions: [24, 23, 22]
+  version: 1.12.3
+
+v1_11:
+  name: v1.11
+  minimum_otp: 21.0
+  otp_versions: [23, 22, 21]
+  version: 1.11.4
+
+v1_10:
+  name: v1.10
+  minimum_otp: 21.0
+  otp_versions: [22, 21]
+  version: 1.10.4
+
+v1_9:
+  name: v1.9
+  minimum_otp: 20.0
+  otp_versions: [22, 21, 20]
+  version: 1.9.4
+
+v1_8:
+  name: v1.8
+  minimum_otp: 20.0
+  otp_versions: [22, 21, 20]
+  version: 1.8.2
+
+v1_7:
+  name: v1.7
+  minimum_otp: 19.0
+  otp_versions: [21, 20, 19]
+  version: 1.7.4
+
+v1_6:
+  name: v1.6
+  minimum_otp: 19.0
+  otp_versions: [21, 20, 19]
+  version: 1.6.6
