@@ -28,11 +28,17 @@ Learnings - 2024 Oct 07 Mon
 - so far no show-stoppers have been uncovered
 
 Tasks - 2024 Oct 08 Tue
-- [ ] update auto-reload patterns 
-- [ ] add homepage (/) 
-- [ ] update liquid tags 
-- [ ] add rest of main pages
+- [x] update auto-reload patterns 
+- [x] add homepage (/) 
+- [x] update liquid tags 
+- [x] add rest of main pages
+
+Learnings - 2024 Oct 08 Tue 
+- converted makdown files to HTML - mostly good
+- RED FLAG - old-site has LIQUID TAGS in the markdown - AFAIK not handled by Tableau - possible show-stopper
+- need to find or write an Elixir Formatter
+
+Next Steps 
 - [ ] render blog page 
 - [ ] render posts
-- [ ] convert all liquid directives to HEEX and/or function components
 
