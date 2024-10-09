@@ -22,7 +22,8 @@ defmodule Elixirlang.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:tableau, "~> 0.15"},
+      # {:tableau, "~> 0.15"},
+      {:tableau, path: "~/src/tableau"},
       {:phoenix_live_view, "~> 0.20"}
 
       # {:dep_from_hexpm, "~> 0.3.0"},
