@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Welcome to Elixir, a dynamic, functional language designed for building scalable and maintainable applications">
+
+    <title>
+      Installing Elixir | Elixir.Elixirlang
+    </title>
+
+    <link href="https://elixir-lang.org/atom.xml" rel="alternate" title="Elixir's Blog" type="application/atom+xml">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/syntax.css">
+    <link rel="stylesheet" href="/js/icons/style.css">
+    <!--[if lt IE 8]><!-->
+    <link rel="stylesheet" href="/js/icons/ie7/ie7.css">
+    <!--<![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" id="font-bitter-css" href="//fonts.googleapis.com/css?family=Bitter:400,700" type="text/css" media="screen">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="search" type="application/opensearchdescription+xml" title="elixir-lang.org" href="/opensearch.xml">
+    <script defer src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script defer src="/js/index.js" type="text/javascript" charset="utf-8">
+    </script>
+  </head>
+
+  <body class="{{ page.section }}">
+    <div id="container">
+      <div class="wrap">
+        <div id="header">
+          <div id="branding">
+            <a id="site-title" href="/" title="Elixir" rel="Home">
+              <img class="logo" src="/images/logo/logo.png" alt="Elixir Logo">
+            </a>
+          </div>
+
+          <div id="menu-primary" class="menu-container">
+            <ul id="menu-primary-items">
+              <li class="menu-item home"><a class="spec" href="/">Home</a></li>
+              <li class="menu-item install"><a class="spec" href="/install">Install</a></li>
+              <li class="menu-item learning">
+                <a class="spec" href="/learning">Learning</a>
+              </li>
+              <li class="menu-item docs"><a class="spec" href="/docs">Docs</a></li>
+              <li class="menu-item getting-started">
+                <a class="spec" href="https://hexdocs.pm/elixir/introduction.html">Guides</a>
+              </li>
+              <li class="menu-item cases"><a class="spec" href="/cases">Cases</a></li>
+              <li class="menu-item blog"><a class="spec" href="/blog/">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <div id="main">
+  <div id="content">
+    <p>{% assign stable = site.data.elixir-versions[site.data.elixir-versions.stable] %}</p>
+<h1><a href="#install" aria-hidden="true" class="anchor" id="install"></a>Install</h1>
+<p>{% include toc.html %}</p>
+<p>The quickest way to install Elixir is through a distribution or using one of the available installers. If such an option is not available, then we recommend using the precompiled packages or compiling the language yourself. All of these options are detailed next.</p>
+<p>Note that Elixir {{ stable.name }} requires Erlang {{ stable.minimum_otp }} or later. Many of the instructions below will automatically install Erlang for you. If they do not, the &quot;Installing Erlang&quot; section has you covered.</p>
+<p>If you are not sure if you have Elixir installed or not, you can run <code>elixir --version</code> in your terminal.</p>
+<h2><a href="#by-operating-system" aria-hidden="true" class="anchor" id="by-operating-system"></a>By Operating System</h2>
+<p>Install Elixir according to your operating system and tool of choice.</p>
+<h3><a href="#macos" aria-hidden="true" class="anchor" id="macos"></a>macOS</h3>
+<ul>
+<li>
+<p>Using <a href="https://brew.sh/">Homebrew</a>:</p>
+<ul>
+<li>Run: <code>brew install elixir</code></li>
+</ul>
+</li>
+<li>
+<p>Using <a href="https://www.macports.org/">Macports</a>:</p>
+<ul>
+<li>Run: <code>sudo port install elixir</code></li>
+</ul>
+</li>
+</ul>
+<p>Note version managers (described below), are also available for macOS.</p>
+<h3><a href="#gnulinux" aria-hidden="true" class="anchor" id="gnulinux"></a>GNU/Linux</h3>
+<p>On Unix systems, there are two options to install Elixir. You can use the Erlang/Elixir packages that are part of your distribution, although those may lag behind in version numbers (especially for LTS releases). In such cases, you can also opt to use a version manager.</p>
+<h4><a href="#version-managers" aria-hidden="true" class="anchor" id="version-managers"></a>Version managers</h4>
+<p>There are many tools that allow developers to install and manage multiple Erlang and Elixir versions. They are useful if you have multiple projects running on different Elixir or Erlang versions, can't install Erlang or Elixir as mentioned above or if the version provided by your package manager is outdated. Here are some of those tools:</p>
+<ul>
+<li><a href="https://github.com/asdf-vm/asdf">asdf</a> - install and manage different <a href="https://github.com/asdf-vm/asdf-elixir">Elixir</a> and <a href="https://github.com/asdf-vm/asdf-erlang">Erlang</a> versions</li>
+<li><a href="https://github.com/taylor/kiex">kiex</a> - install and manage different Elixir versions</li>
+<li><a href="https://github.com/yrashk/kerl">kerl</a> - install and manage different Erlang versions</li>
+</ul>
+<p>Keep in mind that each Elixir version supports specific Erlang/OTP versions. <a href="/docs">See the supported versions alongside our docs</a>.</p>
+<h4><a href="#distributions" aria-hidden="true" class="anchor" id="distributions"></a>Distributions</h4>
+<ul>
+<li>
+<p><strong>Alpine Linux</strong> (Community repository)</p>
+<ul>
+<li>Run: <code>apk add elixir</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Arch Linux</strong> (Community repository)</p>
+<ul>
+<li>Run: <code>pacman -S elixir</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Debian</strong></p>
+<ul>
+<li>Run: <code>sudo apt install erlang-dev elixir</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Debian</strong> (and <strong>Ubuntu</strong>) alternative</p>
+<ul>
+<li>
+<p>Use the <a href="https://launchpad.net/~rabbitmq">RabbitMQ Packages</a> (might not be up-to-date however likely newer than the distribution)</p>
+<pre class="autumn-hl" style="background-color: #1F1F28; color: #DCD7BA;"><code class="language-bash" translate="no"><span class="ahl-function" style="color: #7E9CD8;"><span class="ahl-operator" style="color: #C0A36E;">$</span> sudo</span> add-apt-repository ppa:rabbitmq&#x2f;rabbitmq-erlang
+<span class="ahl-function" style="color: #7E9CD8;"><span class="ahl-operator" style="color: #C0A36E;">$</span> sudo</span> apt update
+<span class="ahl-function" style="color: #7E9CD8;"><span class="ahl-operator" style="color: #C0A36E;">$</span> sudo</span> apt install elixir erlang-dev erlang-xmerl
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Fedora 21 (and older)</strong></p>
+<ul>
+<li>Run: <code>sudo yum install elixir</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Fedora 22 (and newer)</strong></p>
+<ul>
+<li>Run: <code>sudo dnf install elixir erlang</code></li>
+<li>Documentation is available in separate packages: <code>sudo dnf install elixir-doc erlang-doc</code></li>
+<li>Fedora's Rawhide repository has newer versions before they go into the main repositories: <code>sudo dnf --disablerepo='*' --enablerepo=rawhide install elixir elixir-doc erlang erlang-doc</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Gentoo</strong></p>
+<ul>
+<li>Run: <code>emerge --ask dev-lang/elixir</code></li>
+</ul>
+</li>
+<li>
+<p><strong>GNU Guix</strong></p>
+<ul>
+<li>Run: <code>guix package -i elixir</code></li>
+</ul>
+</li>
+<li>
+<p><strong>openSUSE (and SLES)</strong></p>
+<ul>
+<li>Add Elixir/Erlang repository: <code>zypper ar -f obs://devel:languages:erlang/ Elixir-Factory</code></li>
+<li>Run: <code>zypper in elixir</code></li>
+<li>Optional: if you want to use the latest Erlang, you can use this repository: <code>zypper ar -f  obs://devel:languages:erlang:Factory Erlang-Factory</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Slackware</strong></p>
+<ul>
+<li>Using Sbopkg:
+<ul>
+<li>Run: <code>sbopkg -ki &quot;erlang-otp elixir&quot;</code></li>
+</ul>
+</li>
+<li>Manually:
+<ul>
+<li>Download, build and install from SlackBuilds.org: <a href="https://slackbuilds.org/repository/14.2/development/erlang-otp/"><code>erlang-otp</code></a>, and <a href="https://slackbuilds.org/repository/14.2/development/elixir"><code>elixir</code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Solus</strong></p>
+<ul>
+<li>Run: <code>eopkg install elixir</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Ubuntu</strong></p>
+<ul>
+<li>Run: <code>sudo apt install elixir</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Void Linux</strong></p>
+<ul>
+<li>Run: <code>xbps-install -S elixir</code></li>
+</ul>
+</li>
+</ul>
+<h3><a href="#bsd" aria-hidden="true" class="anchor" id="bsd"></a>BSD</h3>
+<ul>
+<li>
+<p><strong>FreeBSD</strong></p>
+<ul>
+<li>The latest Elixir release is named <a href="https://freshports.org/lang/elixir-devel">lang/elixir-devel</a>.
+The default Elixir, <a href="https://freshports.org/lang/elixir">lang/elixir</a>, may
+lag slightly as dependent ports are often not able to be updated to the
+newest Elixir release immediately.</li>
+<li>Using ports:
+<ul>
+<li>Run: <code>cd /usr/ports/lang/elixir &amp;&amp; make install clean</code></li>
+</ul>
+</li>
+<li>Using pkg:
+<ul>
+<li>Run: <code>pkg install elixir</code> or <code>pkg install elixir-devel</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>OpenBSD</strong></p>
+<ul>
+<li>Run: <code>pkg_add elixir</code></li>
+</ul>
+</li>
+</ul>
+<h3><a href="#windows" aria-hidden="true" class="anchor" id="windows"></a>Windows</h3>
+<ul>
+<li>
+<p>Using Windows installers:</p>
+<ul>
+<li><a href="https://www.erlang.org/downloads.html">Download and run the Erlang installer</a></li>
+<li>Download and run the Elixir installer compatible with your Erlang/OTP version:
+{% for otp_version in stable.otp_versions %}      * [Elixir {{ stable.version }} on Erlang {{ otp_version }}](https://github.com/elixir-lang/elixir/releases/download/v{{ stable.version }}/elixir-otp-{{ otp_version }}.exe)
+{% endfor %}
+Run <code>erl</code> in the terminal if you are unsure of your Erlang/OTP version.<br />Previous Elixir versions are available in our <a href="https://github.com/elixir-lang/elixir/releases">Releases</a> page.</li>
+</ul>
+</li>
+<li>
+<p>Using <a href="https://scoop.sh/">Scoop</a>:</p>
+<ul>
+<li>Install Erlang: <code>scoop install erlang</code></li>
+<li>Install Elixir: <code>scoop install elixir</code></li>
+</ul>
+</li>
+<li>
+<p>Using <a href="https://community.chocolatey.org/">Chocolatey</a>:</p>
+<ul>
+<li>Install Elixir (installs Erlang as a dependency): <code>choco install elixir</code></li>
+</ul>
+</li>
+</ul>
+<p>Elixir versions before v1.15 can also be installed using the deprecated <a href="https://github.com/elixir-lang/elixir-windows-setup/releases/tag/v2.4">Online Elixir Installer</a>.</p>
+<h3><a href="#raspberry-pi-and-embedded-devices" aria-hidden="true" class="anchor" id="raspberry-pi-and-embedded-devices"></a>Raspberry Pi and embedded devices</h3>
+<p>To build and package an Elixir application, with the whole operating system, and burn that into a disk or deploy it overwhere, <a href="https://www.nerves-project.org">check out the Nerves project</a>.</p>
+<p>If you want to install Elixir as part of an existing Operating System, please follow the relevant steps above for your Operating System or install from precompiled/source.</p>
+<h3><a href="#docker" aria-hidden="true" class="anchor" id="docker"></a>Docker</h3>
+<p>If you are familiar with Docker you can use the official Docker image to get started quickly with Elixir.</p>
+<ul>
+<li>Enter interactive mode
+<ul>
+<li>Run: <code>docker run -it --rm elixir</code></li>
+</ul>
+</li>
+<li>Enter bash within container with installed <code>elixir</code>
+<ul>
+<li>Run: <code>docker run -it --rm elixir bash</code></li>
+</ul>
+</li>
+</ul>
+<p>The above will automatically point to the latest Erlang and Elixir available. For production usage, we recommend using <a href="https://hub.docker.com/r/hexpm/elixir">Hex.pm Docker images</a>, which are immutable and point to a specific Erlang and Elixir version.</p>
+<h2><a href="#precompiled-package" aria-hidden="true" class="anchor" id="precompiled-package"></a>Precompiled package</h2>
+<p>Elixir provides a precompiled package for every release. First <a href="/install.html#installing-erlang">install Erlang</a> and then download the appropriate precompiled Elixir below. You can consult your Erlang/OTP version by running <code>erl -s halt</code>:</p>
+<p>{% for otp_version in stable.otp_versions %}</p>
+<ul>
+<li>[Elixir {{ stable.version }} on Erlang/OTP {{ otp_version }}](https://github.com/elixir-lang/elixir/releases/download/v{{ stable.version }}/elixir-otp-{{ otp_version }}.zip){% endfor %}</li>
+</ul>
+<p>Once you download the release, unpack it, and you are ready to run the <code>elixir</code> and <code>iex</code> commands from the <code>bin</code> directory. However, we recommend you to <a href="#setting-path-environment-variable">add Elixir's bin path to your PATH environment variable</a> to ease development.</p>
+<h3><a href="#mirrors-and-nightly-builds" aria-hidden="true" class="anchor" id="mirrors-and-nightly-builds"></a>Mirrors and nightly builds</h3>
+<p>The links above point directly to the GitHub release. We also host and mirror precompiled packages and nightly builds globally via <code>builds.hex.pm</code> using the following URL scheme:</p>
+<pre class="autumn-hl" style="background-color: #1F1F28; color: #DCD7BA;"><code class="language-plaintext" translate="no">https:&#x2f;&#x2f;builds.hex.pm&#x2f;builds&#x2f;elixir&#x2f;${ELIXIR_VERSION}-otp-${OTP_VERSION}.zip
+</code></pre>
+<p>For example, to use Elixir v1.13.3 with Erlang/OTP 24.x, use:</p>
+<pre class="autumn-hl" style="background-color: #1F1F28; color: #DCD7BA;"><code class="language-plaintext" translate="no">https:&#x2f;&#x2f;builds.hex.pm&#x2f;builds&#x2f;elixir&#x2f;v1.13.3-otp-24.zip
+</code></pre>
+<p>To use nightly for a given Erlang/OTP version (such as 25), use:</p>
+<pre class="autumn-hl" style="background-color: #1F1F28; color: #DCD7BA;"><code class="language-plaintext" translate="no">https:&#x2f;&#x2f;builds.hex.pm&#x2f;builds&#x2f;elixir&#x2f;main-otp-25.zip
+</code></pre>
+<p>For a list of all builds, use:</p>
+<pre class="autumn-hl" style="background-color: #1F1F28; color: #DCD7BA;"><code class="language-plaintext" translate="no">https:&#x2f;&#x2f;builds.hex.pm&#x2f;builds&#x2f;elixir&#x2f;builds.txt
+</code></pre>
+<h2><a href="#compiling-from-source" aria-hidden="true" class="anchor" id="compiling-from-source"></a>Compiling from source</h2>
+<p>You can download and compile Elixir in few steps. The first one is to <a href="/install.html#installing-erlang">install Erlang</a>. You will also need <a href="https://www.gnu.org/software/make/">make</a> available.</p>
+<p>Next you should download source code ([.zip](https://github.com/elixir-lang/elixir/archive/v{{ stable.version }}.zip), [.tar.gz](https://github.com/elixir-lang/elixir/archive/v{{ stable.version }}.tar.gz)) of the [latest release](https://github.com/elixir-lang/elixir/releases/tag/v{{ stable.version }}), unpack it and then run <code>make</code> inside the unpacked directory (note: if you are running on Windows, <a href="https://github.com/elixir-lang/elixir/wiki/Windows">read this page on setting up your environment for compiling Elixir</a>).</p>
+<p>After compiling, you are ready to run the elixir and <code>iex</code> commands from the bin directory. It is recommended that you <a href="#setting-path-environment-variable">add Elixir's bin path to your PATH environment variable</a> to ease development.</p>
+<p>In case you are feeling a bit more adventurous, you can also compile from main:</p>
+<pre class="autumn-hl" style="background-color: #1F1F28; color: #DCD7BA;"><code class="language-bash" translate="no"><span class="ahl-function" style="color: #7E9CD8;"><span class="ahl-operator" style="color: #C0A36E;">$</span> git</span> clone https:&#x2f;&#x2f;github.com&#x2f;elixir-lang&#x2f;elixir.git
+<span class="ahl-function" style="color: #7E9CD8;"><span class="ahl-operator" style="color: #C0A36E;">$</span> cd</span> elixir
+<span class="ahl-function" style="color: #7E9CD8;"><span class="ahl-operator" style="color: #C0A36E;">$</span> make</span> clean compile
+</code></pre>
+<h2><a href="#installing-erlang" aria-hidden="true" class="anchor" id="installing-erlang"></a>Installing Erlang</h2>
+<p>The only prerequisite for Elixir is Erlang, version {{ stable.minimum_otp }} or later. When installing Elixir, Erlang is generally installed automatically for you. However, if you want to install Erlang manually, you might check:</p>
+<ul>
+<li><a href="http://www.erlang.org/downloads.html">Source code distribution and Windows installers from Erlang's official website</a></li>
+<li><a href="https://www.erlang-solutions.com/resources/download.html">Precompiled packages for some Unix-like installations</a></li>
+<li><a href="https://docs.riak.com/riak/kv/latest/setup/installing/source/erlang/">A general list of installation methods from the Riak documentation</a></li>
+</ul>
+<p>After Erlang is installed, you should be able to open up the command line (or command prompt) and check the Erlang version by typing <code>erl -s erlang halt</code>. You will see some information similar to:</p>
+<pre class="autumn-hl" style="background-color: #1F1F28; color: #DCD7BA;"><code class="language-plaintext" translate="no">Erlang&#x2f;OTP {{ stable.minimum_otp }} [64-bit] [smp:2:2] [...]
+</code></pre>
+<p>Notice that depending on how you installed Erlang, Erlang binaries might not be available in your PATH. Be sure to have Erlang binaries in your <a href="https://en.wikipedia.org/wiki/Environment_variable">PATH</a>, otherwise Elixir won't work!</p>
+<h2><a href="#setting-path-environment-variable" aria-hidden="true" class="anchor" id="setting-path-environment-variable"></a>Setting PATH environment variable</h2>
+<p>It is highly recommended to add Elixir's bin path to your PATH environment variable to ease development.</p>
+<p>On Windows, there are <a href="http://www.computerhope.com/issues/ch000549.htm">instructions for different versions</a> explaining the process.</p>
+<p>On Unix systems, you need to <a href="https://unix.stackexchange.com/a/117470/101951">find your shell profile file</a>, and then add to the end of this file the following line reflecting the path to your Elixir installation:</p>
+<pre class="autumn-hl" style="background-color: #1F1F28; color: #DCD7BA;"><code class="language-bash" translate="no"><span class="ahl-keyword" style="color: #957FB8;">export</span> PATH=<span class="ahl-string" style="color: #98BB6C;">&quot;<span class="ahl-operator" style="color: #C0A36E;">$</span>PATH:&#x2f;path&#x2f;to&#x2f;elixir&#x2f;bin&quot;</span>
+</code></pre>
+<h2><a href="#asking-questions" aria-hidden="true" class="anchor" id="asking-questions"></a>Asking questions</h2>
+<p>After Elixir is up and running, it is common to have questions as you learn and use the language. There are many places where you can ask questions, here are some of them:</p>
+<ul>
+<li><a href="irc://irc.libera.chat/elixir">#elixir on irc.libera.chat</a></li>
+<li><a href="http://elixirforum.com">Elixir Forum</a></li>
+<li><a href="https://elixir-slack.community">Elixir on Slack</a></li>
+<li><a href="https://discord.gg/elixir">Elixir on Discord</a></li>
+<li><a href="https://stackoverflow.com/questions/tagged/elixir">elixir tag on StackOverflow</a></li>
+</ul>
+<p>When asking questions, remember these two tips:</p>
+<ul>
+<li>
+<p>Instead of asking &quot;how to do X in Elixir&quot;, ask &quot;how to solve Y in Elixir&quot;. In other words, don't ask how to implement a particular solution, instead describe the problem at hand. Stating the problem gives more context and less bias for a correct answer.</p>
+</li>
+<li>
+<p>In case things are not working as expected, please include as much information as you can in your report, for example: your Elixir version, the code snippet and the error message alongside the error stacktrace.</p>
+</li>
+</ul>
+<p>Enjoy!</p>
+
+  </div>
+  <div id="sidebar-primary" class="sidebar">
+    <div>
+  <div class="widget news">
+    <h3>News: <a href="/blog/2024/06/12/elixir-v1-17-0-released/">Elixir v1.17 released</a></h3>
+  </div>
+
+  <div class="widget search">
+    <form method="post" role="search" id="search-form" class="search-form" action="https://duckduckgo.com/?kg=p" onsubmit="document.getElementById('searchq').value = document.getElementById('searchfield').value + ' (site:elixir-lang.org | site:hexdocs.pm/elixir | site:hexdocs.pm/mix | site:hexdocs.pm/eex | site:hexdocs.pm/logger | site:hexdocs.pm/iex | site:hexdocs.pm/ex_unit)'; return true;">
+      <input type="hidden" id="searchq" name="q" value="" aria-hidden="true">
+
+      <input class="search-text" type="search" placeholder="Search..." id="searchfield" aria-label="Search box">
+      <input class="search-submit button" name="submit" type="submit" value="Search" aria-label="Search button">
+    </form>
+  </div>
+</div>
+    <div>
+  <div class="widget">
+    <h3 class="widget-title">Important links</h3>
+    <ul>
+      <li class="menu-item development"><a class="spec" href="/development.html">Development & Team</a></li>
+      <li><a class="spec" href="https://github.com/elixir-lang/elixir">Source code & issues tracker</a></li>
+    </ul>
+  </div>
+
+  <div id="mini-docu" class="widget">
+    <a href="https://cult.honeypot.io/originals/elixir-the-documentary">
+      <div class="mini-docu-cta">
+        <div class="mini-docu-copy">Watch the Elixir<br>mini-documentary!</div>
+      </div>
+    </a>
+  </div>
+
+  <div class="widget events">
+    <h3 class="widget-title">Upcoming events</h3>
+    <a href="https://2024.elixirconf.com/">
+      <img src="https://2022.elixirconf.com/images/resources/elixirconf-logo.svg" alt="ElixirConf">
+      <br>
+      <ul>
+        <li><b>Aug 27-30, 2024</b> - Orlando, FL.</li>
+        <li><b>10 training classes, 60+ speakers</b></li>
+      </ul>
+    </a>
+  </div>
+
+  <div class="widget">
+    <h3 class="widget-title">Join the Community</h3>
+    <ul>
+      <li><a class="spec" href="https://hex.pm">Hex.pm package manager</a></li>
+      <li><a class="spec" href="https://twitter.com/elixirlang">@elixirlang on Twitter</a></li>
+      <li><a class="spec" href="irc://irc.libera.chat/elixir">#elixir on irc.libera.chat</a></li>
+      <li><a class="spec" href="http://elixirforum.com">Elixir Forum</a></li>
+      <li><a class="spec" href="https://elixir-slack.community">Elixir on Slack</a></li>
+      <li><a class="spec" href="https://discord.gg/elixir">Elixir on Discord</a></li>
+      <li><a class="spec" href="https://github.com/elixir-lang/elixir/wiki/Code-Editor-Support">IDE/Editor support</a>
+      </li>
+      <li><a class="spec" href="https://www.meetup.com/topics/elixir/">Meetups around the world</a></li>
+      <li><a class="spec" href="https://github.com/elixir-lang/elixir/wiki/Hiring-Elixir-Developers">Jobs and hiring
+          (community wiki)</a></li>
+      <li><a class="spec" href="https://github.com/elixir-lang/elixir/wiki">Events and resources (community wiki)</a></li>
+    </ul>
+  </div>
+
+  <div id="eef" class="widget">
+    <a href="https://erlef.org/" title="Join the Erlang Ecosystem Foundation"><img src="/images/logo/eef.png" alt="Join the Erlang Ecosystem Foundation" width="174" style="margin-top:-10px"></a>
+  </div>
+
+
+
+
+</div>
+  </div>
+</div>
+        </div>
+
+        <div class="clear"></div>
+
+        <div id="trademark">
+          &copy; 2012–2024 The Elixir Team.<br>
+          Elixir and the Elixir logo are <a href="/trademarks">registered trademarks of The Elixir Team</a>.
+        </div>
+      </div>
+      <!-- .wrap -->
+    </div>
+    <!-- #container -->
+  </body>
+  
+    <script>
+  function log(message) {
+    if (true) {
+      console.log(`[web_dev_utils] ${message}`)
+    }
+  }
+  function connect() {
+    try {
+      window.socket = new WebSocket('ws://' + location.host + '/ws');
+
+      window.socket.onmessage = function(e) {
+        if (e.data === "reload") {
+          log("reloading!");
+          location.reload();
+        } else if (e.data === "subscribed") {
+          log("connected and subscribed!");
+        }
+      }
+
+      window.socket.onopen = () => {
+        waitForConnection(() => {
+          log("sending 'subscribe' message");
+          window.socket.send("subscribe")
+        }
+        , 300);
+      };
+
+      window.socket.onclose = () => {
+        setTimeout(() => connect(), 500);
+      };
+
+      function waitForConnection(callback, interval) {
+        log("waiting for connection!")
+        if (window.socket.readyState === 1) {
+          callback();
+        } else {
+          log("setting a timeout")
+          setTimeout(() => waitForConnection(callback, interval), interval);
+        }
+      }
+    } catch (e) {
+      log(e);
+      setTimeout(() => connect(), 500);
+    }
+  }
+
+  log("about to connect");
+  connect();
+</script>
+
+  
+</html>

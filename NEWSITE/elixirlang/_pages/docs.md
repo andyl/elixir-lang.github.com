@@ -1,7 +1,7 @@
 ---
 title: Elixir Documentation
-layout: Elixirlang.PageLayout
-permalink: /page/docs
+layout: Elixirlang.SidebarLayout
+permalink: /docs
 ---
 
 # Documentation

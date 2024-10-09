@@ -15,7 +15,7 @@ config :tableau, :config,
   markdown: [
     mdex: [
       extension: [table: true, header_ids: "", tasklist: true, strikethrough: true],
-      render: [unsafe_: true],
+      render: [unsafe_: true, escape: false],
       features: [syntax_highlight_theme: "kanagawa"]
     ]
   ]

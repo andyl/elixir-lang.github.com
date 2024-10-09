@@ -39,15 +39,15 @@
           <div id="menu-primary" class="menu-container">
             <ul id="menu-primary-items">
               <li class="menu-item home"><a class="spec" href="/">Home</a></li>
-              <li class="menu-item install"><a class="spec" href="/install.html">Install</a></li>
+              <li class="menu-item install"><a class="spec" href="/install">Install</a></li>
               <li class="menu-item learning">
-                <a class="spec" href="/learning.html">Learning</a>
+                <a class="spec" href="/learning">Learning</a>
               </li>
-              <li class="menu-item docs"><a class="spec" href="/docs.html">Docs</a></li>
+              <li class="menu-item docs"><a class="spec" href="/docs">Docs</a></li>
               <li class="menu-item getting-started">
                 <a class="spec" href="https://hexdocs.pm/elixir/introduction.html">Guides</a>
               </li>
-              <li class="menu-item cases"><a class="spec" href="/cases.html">Cases</a></li>
+              <li class="menu-item cases"><a class="spec" href="/cases">Cases</a></li>
               <li class="menu-item blog"><a class="spec" href="/blog/">Blog</a></li>
             </ul>
           </div>
@@ -56,40 +56,29 @@
         <div>
           <div id="main">
   <div id="content">
-    <div class="hfeed">
-  <div class="hentry post">
-    <div class="entry-summary">
-      <h5>
-        Elixir is a dynamic, functional language for building scalable and
-        maintainable applications.
-      </h5>
+    <h1>Cases</h1>
 
-      <p>
-        Elixir runs on the Erlang VM, known for creating low-latency,
-        distributed, and fault-tolerant systems. These capabilities and Elixir
-        tooling allow developers to be productive in several domains, such as web
-        development, embedded software, machine learning, data pipelines, and
-        multimedia processing, across a wide range of industries.
-      </p>
+<p>Click on the cases below to learn more about how companies across different industries are using the power of Elixir and its ecosystem to create and grow their businesses. Cases are listed in the order they have been published.</p>
 
-      <p>
-        Here is a peek:
-      </p>
-
-      <div class="code-literal">
-        iex> "Elixir" |> String.graphemes() |> Enum.frequencies()
-        %{"E" => 1, "i" => 2, "l" => 1, "r" => 1, "x" => 1}
+<div class="cases-boxes">
+  {% assign sorted_posts = site.categories["Elixir in Production"] | sort: 'date' %}
+  {% for post in sorted_posts %}
+    <a class="cases-box" href="{{ post.url }}" title="Case: {{ post.title }}">
+      {% if post.logo == nil %}
+        <div class="cases-image" style="background-image: url('/images/cases/logos/default-image.png')"></div>
+      {% else %}
+        <div class="cases-image" style="background-image: url('{{ post.logo }}')"></div>
+      {% endif %}
+      <div class="cases-tag">
+        {% for tag in post.tags %}
+          <span>#{{tag}}</span>
+        {% endfor %}
       </div>
-
-      <p>
-        Check our <a href="https://hexdocs.pm/elixir/introduction.html">Getting Started guide</a>
-        and our <a href="/learning.html">Learning page</a>
-        to begin your journey with Elixir. Or keep scrolling for an overview of the platform, language, and tools.
-      </p>
-    </div>
-  </div>
-
+    </a>
+  {% endfor %}
 </div>
+
+<p></p>
   </div>
   <div id="sidebar-primary" class="sidebar">
     <div>

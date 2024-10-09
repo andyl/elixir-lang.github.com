@@ -1,7 +1,7 @@
 defmodule Elixirlang.HomePage do
   use Tableau.Page,
-    layout: Elixirlang.RootLayout,
-    permalink: "/home"
+    layout: Elixirlang.SidebarLayout,
+    permalink: "/"
 
   use Phoenix.Component
   import Elixirlang.Components
