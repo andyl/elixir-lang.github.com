@@ -10,6 +10,7 @@
     </title>
 
     <link href="https://elixir-lang.org/atom.xml" rel="alternate" title="Elixir's Blog" type="application/atom+xml">
+
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="stylesheet" type="text/css" href="/css/syntax.css">
     <link rel="stylesheet" href="/js/icons/style.css">
@@ -56,7 +57,9 @@
         <div>
           <div id="main">
   <div id="content">
-    <p>{% assign stable = site.data.elixir-versions[site.data.elixir-versions.stable] %}</p>
+    <p><strong>LIQUID RENDER ERROR!</strong></p>
+<p>{% assign stable = site.data.elixir-versions[site.data.elixir-versions.stable] %}</p>
+<p>{{ permalink }}</p>
 <h1><a href="#install" aria-hidden="true" class="anchor" id="install"></a>Install</h1>
 <p>{% include toc.html %}</p>
 <p>The quickest way to install Elixir is through a distribution or using one of the available installers. If such an option is not available, then we recommend using the precompiled packages or compiling the language yourself. All of these options are detailed next.</p>

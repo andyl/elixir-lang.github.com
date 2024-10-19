@@ -6,10 +6,11 @@
     <meta name="description" content="Welcome to Elixir, a dynamic, functional language designed for building scalable and maintainable applications">
 
     <title>
-      Elixir.Elixirlang
+      Base Base | Elixir.Elixirlang
     </title>
 
     <link href="https://elixir-lang.org/atom.xml" rel="alternate" title="Elixir's Blog" type="application/atom+xml">
+
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="stylesheet" type="text/css" href="/css/syntax.css">
     <link rel="stylesheet" href="/js/icons/style.css">
@@ -39,15 +40,15 @@
           <div id="menu-primary" class="menu-container">
             <ul id="menu-primary-items">
               <li class="menu-item home"><a class="spec" href="/">Home</a></li>
-              <li class="menu-item install"><a class="spec" href="/install.html">Install</a></li>
+              <li class="menu-item install"><a class="spec" href="/install">Install</a></li>
               <li class="menu-item learning">
-                <a class="spec" href="/learning.html">Learning</a>
+                <a class="spec" href="/learning">Learning</a>
               </li>
-              <li class="menu-item docs"><a class="spec" href="/docs.html">Docs</a></li>
+              <li class="menu-item docs"><a class="spec" href="/docs">Docs</a></li>
               <li class="menu-item getting-started">
                 <a class="spec" href="https://hexdocs.pm/elixir/introduction.html">Guides</a>
               </li>
-              <li class="menu-item cases"><a class="spec" href="/cases.html">Cases</a></li>
+              <li class="menu-item cases"><a class="spec" href="/cases">Cases</a></li>
               <li class="menu-item blog"><a class="spec" href="/blog/">Blog</a></li>
             </ul>
           </div>
@@ -56,40 +57,14 @@
         <div>
           <div id="main">
   <div id="content">
-    <div class="hfeed">
-  <div class="hentry post">
-    <div class="entry-summary">
-      <h5>
-        Elixir is a dynamic, functional language for building scalable and
-        maintainable applications.
-      </h5>
+    <h1><a href="#hello-base" aria-hidden="true" class="anchor" id="hello-base"></a>Hello Base</h1>
+<p>tag 1234</p>
+<p>hey</p>
+<pre class="autumn-hl" style="background-color: #1F1F28; color: #DCD7BA;"><code class="language-elixir" translate="no"><span class="ahl-variable" style="color: #DCD7BA;">iex</span><span class="ahl-operator" style="color: #C0A36E;">&gt;</span> <span class="ahl-string" style="color: #98BB6C;">&quot;Elixir&quot;</span> <span class="ahl-operator" style="color: #C0A36E;">|&gt;</span> <span class="ahl-namespace" style="color: #FFA066;">String</span><span class="ahl-operator" style="color: #C0A36E;">.</span><span class="ahl-function" style="color: #7E9CD8;">graphemes</span><span class="ahl-punctuation ahl-bracket" style="color: #9CABCA;">(</span><span class="ahl-punctuation ahl-bracket" style="color: #9CABCA;">)</span> <span class="ahl-operator" style="color: #C0A36E;">|&gt;</span> <span class="ahl-namespace" style="color: #FFA066;">Enum</span><span class="ahl-operator" style="color: #C0A36E;">.</span><span class="ahl-function" style="color: #7E9CD8;">frequencies</span><span class="ahl-punctuation ahl-bracket" style="color: #9CABCA;">(</span><span class="ahl-punctuation ahl-bracket" style="color: #9CABCA;">)</span>
+<span class="ahl-punctuation" style="color: #9CABCA;">%</span><span class="ahl-punctuation ahl-bracket" style="color: #9CABCA;">{</span><span class="ahl-string" style="color: #98BB6C;">&quot;E&quot;</span> <span class="ahl-operator" style="color: #C0A36E;">=&gt;</span> <span class="ahl-constant ahl-numeric integer" style="color: #D27E99;">1</span><span class="ahl-punctuation ahl-delimiter" style="color: #9CABCA;">,</span> <span class="ahl-string" style="color: #98BB6C;">&quot;i&quot;</span> <span class="ahl-operator" style="color: #C0A36E;">=&gt;</span> <span class="ahl-constant ahl-numeric integer" style="color: #D27E99;">2</span><span class="ahl-punctuation ahl-delimiter" style="color: #9CABCA;">,</span> <span class="ahl-string" style="color: #98BB6C;">&quot;l&quot;</span> <span class="ahl-operator" style="color: #C0A36E;">=&gt;</span> <span class="ahl-constant ahl-numeric integer" style="color: #D27E99;">1</span><span class="ahl-punctuation ahl-delimiter" style="color: #9CABCA;">,</span> <span class="ahl-string" style="color: #98BB6C;">&quot;r&quot;</span> <span class="ahl-operator" style="color: #C0A36E;">=&gt;</span> <span class="ahl-constant ahl-numeric integer" style="color: #D27E99;">1</span><span class="ahl-punctuation ahl-delimiter" style="color: #9CABCA;">,</span> <span class="ahl-string" style="color: #98BB6C;">&quot;x&quot;</span> <span class="ahl-operator" style="color: #C0A36E;">=&gt;</span> <span class="ahl-constant ahl-numeric integer" style="color: #D27E99;">1</span><span class="ahl-punctuation ahl-bracket" style="color: #9CABCA;">}</span>
+</code></pre>
+<p>what</p>
 
-      <p>
-        Elixir runs on the Erlang VM, known for creating low-latency,
-        distributed, and fault-tolerant systems. These capabilities and Elixir
-        tooling allow developers to be productive in several domains, such as web
-        development, embedded software, machine learning, data pipelines, and
-        multimedia processing, across a wide range of industries.
-      </p>
-
-      <p>
-        Here is a peek:
-      </p>
-
-      <div class="code-literal">
-        iex> "Elixir" |> String.graphemes() |> Enum.frequencies()
-        %{"E" => 1, "i" => 2, "l" => 1, "r" => 1, "x" => 1}
-      </div>
-
-      <p>
-        Check our <a href="https://hexdocs.pm/elixir/introduction.html">Getting Started guide</a>
-        and our <a href="/learning.html">Learning page</a>
-        to begin your journey with Elixir. Or keep scrolling for an overview of the platform, language, and tools.
-      </p>
-    </div>
-  </div>
-
-</div>
   </div>
   <div id="sidebar-primary" class="sidebar">
     <div>

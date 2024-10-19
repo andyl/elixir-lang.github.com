@@ -3,7 +3,24 @@ defmodule Elixirlang.Components do
 
   def highlight_elixir(assigns) do
     ~H"""
-    <div class="code-literal"><%= render_slot(@inner_block) %></div>
+    <div>
+      <%= render_slot(@inner_block) |> codehl() %>
+    </div>
     """
+  end
+
+  defp codehl(block) do
+    newstring =
+      """
+      ```elixir
+      #{block.static |> to_string()}
+      ```
+      """
+
+    html = {newstring, %{}}
+      |> Conpipe.Converter.Mdex.convert()
+      |> elem(0)
+
+    Map.put(block, :static, [html])
   end
 end

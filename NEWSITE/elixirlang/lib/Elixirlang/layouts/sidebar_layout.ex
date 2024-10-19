@@ -7,7 +7,7 @@ defmodule Elixirlang.SidebarLayout do
     ~H"""
     <div id="main">
       <div id="content">
-        <%= render(@inner_content) |> Strip.clean()%>
+        <%= {:safe, render(@inner_content)} %>
       </div>
       <div id="sidebar-primary" class="sidebar">
         <Sidebar.search/>

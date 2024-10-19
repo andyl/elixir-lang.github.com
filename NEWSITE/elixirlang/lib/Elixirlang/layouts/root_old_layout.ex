@@ -1,4 +1,4 @@
-defmodule Elixirlang.RootLayout do
+defmodule Elixirlang.RootOldLayout do
   use Tableau.Layout
   use Phoenix.Component
 
@@ -27,6 +27,11 @@ defmodule Elixirlang.RootLayout do
           title="Elixir's Blog"
           type="application/atom+xml"
         />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/elixir.min.js"></script>
+        <script>hljs.highlightAll();</script>
 
         <link rel="stylesheet" type="text/css" href="/css/style.css" />
         <link rel="stylesheet" type="text/css" href="/css/syntax.css" />

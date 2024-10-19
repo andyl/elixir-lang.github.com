@@ -12,6 +12,9 @@ config :web_dev_utils, :reload_log, true
 
 config :tableau, :config,
   url: "http://localhost:4999",
+  converters: [
+    md: Conpipe.Converter.SolidMdex
+  ],
   markdown: [
     mdex: [
       extension: [table: true, header_ids: "", tasklist: true, strikethrough: true],
