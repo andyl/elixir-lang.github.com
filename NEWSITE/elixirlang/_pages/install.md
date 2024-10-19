@@ -5,6 +5,8 @@ permalink: /install
 ---
 {% assign stable = site.data.elixir-versions[site.data.elixir-versions.stable] %}
 
+{{ permalink }} 
+
 # Install
 
 {% include toc.html %}
